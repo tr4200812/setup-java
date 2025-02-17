@@ -109,6 +109,8 @@ Currently, the following distributions are supported:
 | `oracle` | Oracle JDK | [Link](https://www.oracle.com/java/technologies/downloads/) | [Link](https://java.com/freeuselicense)
 | `dragonwell` | Alibaba Dragonwell JDK | [Link](https://dragonwell-jdk.io/) | [Link](https://www.aliyun.com/product/dragonwell/)
 | `sapmachine` | SAP SapMachine JDK/JRE | [Link](https://sapmachine.io/) | [Link](https://github.com/SAP/SapMachine/blob/sapmachine/LICENSE)
+| `graalvm` | Oracle GraalVM | [Link](https://www.graalvm.org/) | [Link](https://www.oracle.com/downloads/licenses/graal-free-license.html)
+| `jetbrains` | JetBrains Runtime | [Link](https://github.com/JetBrains/JetBrainsRuntime/) | [Link](https://github.com/JetBrains/JetBrainsRuntime/blob/main/LICENSE)
 
 **NOTE:** The different distributors can provide discrepant list of available versions / supported configurations. Please refer to the official documentation to see the list of supported versions.
 
@@ -259,6 +261,7 @@ In the example above multiple JDKs are installed for the same job. The result af
   - [Oracle](docs/advanced-usage.md#Oracle)
   - [Alibaba Dragonwell](docs/advanced-usage.md#Alibaba-Dragonwell)
   - [SapMachine](docs/advanced-usage.md#SapMachine)
+  - [GraalVM](docs/advanced-usage.md#GraalVM)
 - [Installing custom Java package type](docs/advanced-usage.md#Installing-custom-Java-package-type)
 - [Installing custom Java architecture](docs/advanced-usage.md#Installing-custom-Java-architecture)
 - [Installing custom Java distribution from local file](docs/advanced-usage.md#Installing-Java-from-local-file)
@@ -269,6 +272,15 @@ In the example above multiple JDKs are installed for the same job. The result af
 - [Hosted Tool Cache](docs/advanced-usage.md#Hosted-Tool-Cache)
 - [Modifying Maven Toolchains](docs/advanced-usage.md#Modifying-Maven-Toolchains)
 - [Java Version File](docs/advanced-usage.md#Java-version-file)
+
+## Recommended permissions
+
+When using the `setup-java` action in your GitHub Actions workflow, it is recommended to set the following permissions to ensure proper functionality:
+
+```yaml
+permissions:
+  contents: read # access to check out code and install dependencies
+```
 
 ## License
 
